@@ -3,7 +3,7 @@ package lesson1;
 import org.testng.annotations.Test;
 import org.testng.xml.dom.Tag;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertEquals;
 
 public final class SimpleTest {
     @Test
