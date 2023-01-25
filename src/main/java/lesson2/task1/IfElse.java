@@ -9,7 +9,7 @@ public class IfElse {
      * <p>
      * Найти число корней квадратного уравнения ax^2 + bx + c = 0
      */
-    public static final int quadraticRootNumber(double a, double b, double c) {
+    public static int quadraticRootNumber(double a, double b, double c) {
         double discriminant = discriminant(a, b, c);
         return discriminant > 0.0 ? 2 : (discriminant == 0.0 ? 1 : 0);
     }
@@ -19,7 +19,7 @@ public class IfElse {
      * <p>
      * Получить строковую нотацию для оценки по пятибалльной системе
      */
-    public static final String gradeNotation(int grade) {
+    public static String gradeNotation(int grade) {
         String notation;
         switch (grade) {
             case 2:
@@ -45,7 +45,7 @@ public class IfElse {
      * <p>
      * Найти наименьший корень биквадратного уравнения ax^4 + bx^2 + c = 0
      */
-    public static final double minBiRoot(double a, double b, double c) {
+    public static double minBiRoot(double a, double b, double c) {
         double d;
         if (a == 0.0) {
             if (b == 0.0) {
@@ -73,7 +73,7 @@ public class IfElse {
      * Мой возраст. Для заданного 0 < n < 200, рассматриваемого как возраст человека,
      * вернуть строку вида: «21 год», «32 года», «12 лет».
      */
-    public static final String ageDescription(int age) {
+    public static String ageDescription(int age) {
         //TODO
         return "";
     }
@@ -85,7 +85,7 @@ public class IfElse {
      * и t3 часов — со скоростью v3 км/час.
      * Определить, за какое время он одолел первую половину пути?
      */
-    public static final double timeForHalfWay(double t1, double v1, double t2, double v2, double t3, double v3) {
+    public static double timeForHalfWay(double t1, double v1, double t2, double v2, double t3, double v3) {
         //TODO
         return 0;
     }
@@ -99,7 +99,7 @@ public class IfElse {
      * и 3, если угроза от обеих ладей.
      * Считать, что ладьи не могут загораживать друг друга
      */
-    public static final int whichRookThreatens(int kingX, int kingY, int rookX1, int rookY1, int rookX2, int rookY2) {
+    public static int whichRookThreatens(int kingX, int kingY, int rookX1, int rookY1, int rookX2, int rookY2) {
         //TODO
         return 0;
     }
@@ -114,7 +114,7 @@ public class IfElse {
      * и 3, если угроза есть и от ладьи и от слона.
      * Считать, что ладья и слон не могут загораживать друг друга.
      */
-    public static final int rookOrBishopThreatens(int kingX, int kingY, int rookX, int rookY, int bishopX, int bishopY) {
+    public static int rookOrBishopThreatens(int kingX, int kingY, int rookX, int rookY, int bishopX, int bishopY) {
         //TODO
         return 0;
     }
@@ -127,7 +127,7 @@ public class IfElse {
      * прямоугольным (вернуть 1) или тупоугольным (вернуть 2).
      * Если такой треугольник не существует, вернуть -1.
      */
-    public static final int triangleKind(double a, double b, double c) {
+    public static int triangleKind(double a, double b, double c) {
         //TODO
         return 0;
     }
@@ -143,7 +143,7 @@ public class IfElse {
      * (Можно написать двумя способами - через switch statement или if statement
      * будет классно, если будут имплементированы оба и будет написан второй тест)
      */
-    public static final int segmentLength(int a, int b, int c, int d) {
+    public static int segmentLength(int a, int b, int c, int d) {
         //TODO
         return 0;
     }

@@ -1,13 +1,13 @@
 package lesson1;
 
-public final class Simple {
+public class Simple {
 
     /**
      * Пример
      * <p>
      * Вычисление квадрата целого числа
      */
-    public static final int sqr(int x) {
+    public static int sqr(int x) {
         return x * x;
     }
 
@@ -17,7 +17,7 @@ public final class Simple {
      * <p>
      * Вычисление квадрата вещественного числа
      */
-    public static final double sqr(double x) {
+    public static double sqr(double x) {
         return x * x;
     }
 
@@ -27,7 +27,7 @@ public final class Simple {
      * <p>
      * Вычисление дискриминанта квадратного уравнения
      */
-    public static final double discriminant(double a, double b, double c) {
+    public static double discriminant(double a, double b, double c) {
         return sqr(b) - (double) 4 * a * c;
     }
 
@@ -37,7 +37,7 @@ public final class Simple {
      * <p>
      * Поиск одного из корней квадратного уравнения
      */
-    public static final double quadraticEquationRoot(double a, double b, double c) {
+    public static double quadraticEquationRoot(double a, double b, double c) {
         double var10000 = -b;
         double var6 = discriminant(a, b, c);
         return (var10000 + Math.sqrt(var6)) / ((double) 2 * a);
@@ -49,7 +49,7 @@ public final class Simple {
      * <p>
      * Поиск произведения корней квадратного уравнения
      */
-    public static final double quadraticRootProduct(double a, double b, double c) {
+    public static double quadraticRootProduct(double a, double b, double c) {
         double x1 = discriminant(a, b, c);
         double sd = Math.sqrt(x1);
         x1 = (-b + sd) / ((double) 2 * a);

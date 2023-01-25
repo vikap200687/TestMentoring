@@ -5,7 +5,7 @@ import org.testng.xml.dom.Tag;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public final class SimpleTest {
+public class SimpleTest {
     @Test
     @Tag(name = "Example")
     public void sqr() {
