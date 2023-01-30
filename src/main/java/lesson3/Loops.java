@@ -25,7 +25,7 @@ public class Loops {
         if (n < 2) return false;
         if (n == 2) return true;
         if (n % 2 == 0) return false;
-        for (int m = 0; m <= (int) sqrt(n); m+= 2) {
+        for (int m = 3; m <= (int) sqrt(n); m+= 2) {
             if (n % m == 0) return false;
         }
         return true;
@@ -108,7 +108,8 @@ public class Loops {
      * Для заданного числа n > 1 найти максимальный делитель, меньший n
      */
     public static int maxDivisor(int n) {
-        return n / minDivisor(n);
+        //TODO
+        return 0;
     }
 
     /**
