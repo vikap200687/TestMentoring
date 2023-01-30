@@ -1,5 +1,6 @@
 package lesson2.task1;
 
+import static java.lang.Math.sqrt;
 import static lesson1.Simple.discriminant;
 
 public class IfElse {
@@ -46,25 +47,22 @@ public class IfElse {
      * Найти наименьший корень биквадратного уравнения ax^4 + bx^2 + c = 0
      */
     public static double minBiRoot(double a, double b, double c) {
-        double d;
+        // 1: в главной ветке if выполняется НЕСКОЛЬКО операторов
         if (a == 0.0) {
-            if (b == 0.0) {
-                return Double.NaN;
-            } else {
-                d = -c / b;
-                return d < 0.0 ? Double.NaN : -Math.sqrt(d);
-            }
-        } else {
-            d = discriminant(a, b, c);
-            if (d < 0.0) {
-                return Double.NaN;
-            } else {
-                double y1 = (-b + Math.sqrt(d)) / ((double) 2 * a);
-                double y2 = (-b - Math.sqrt(d)) / ((double) 2 * a);
-                double y3 = Math.max(y1, y2);
-                return y3 < 0.0 ? Double.NaN : -Math.sqrt(y3);
-            }
+            if (b == 0.0) return Double.NaN; // ... и ничего больше не делать
+            double bc = -c / b;
+            if (bc < 0) return Double.NaN;
+            return -sqrt(bc);
+            // Дальше функция при a == 0.0 не идёт
         }
+        double d = discriminant(a, b, c);//2
+        if (d < 0.0) return Double.NaN;//3
+        //4:
+        double y1 = (-b + sqrt(d)) / ((double) 2 * a);
+        double y2 = (-b - sqrt(d)) / ((double) 2 * a);
+        double y3 = Math.max(y1, y2); //5
+        if (y3 < 0.0) return Double.NaN; //6
+        return -sqrt(y3); //7
     }
 
     /**
@@ -121,7 +119,7 @@ public class IfElse {
 
     /**
      * Простая
-     *
+     * <p>
      * Треугольник задан длинами своих сторон a, b, c.
      * Проверить, является ли данный треугольник остроугольным (вернуть 0),
      * прямоугольным (вернуть 1) или тупоугольным (вернуть 2).
@@ -135,7 +133,7 @@ public class IfElse {
 
     /**
      * Средняя
-     *
+     * <p>
      * Даны четыре точки на одной прямой: A, B, C и D.
      * Координаты точек a, b, c, d соответственно, b >= a, d >= c.
      * Найти длину пересечения отрезков AB и CD.
