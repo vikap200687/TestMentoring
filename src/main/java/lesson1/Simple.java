@@ -8,7 +8,8 @@ public class Simple {
      * Вычисление квадрата целого числа
      */
     public static int sqr(int x) {
-        return x * x;
+        int result = x * x;
+        return result;
     }
 
 
@@ -18,6 +19,7 @@ public class Simple {
      * Вычисление квадрата вещественного числа
      */
     public static double sqr(double x) {
+        System.out.println("вычисляем вещественное число");
         return x * x;
     }
 
@@ -28,7 +30,7 @@ public class Simple {
      * Вычисление дискриминанта квадратного уравнения
      */
     public static double discriminant(double a, double b, double c) {
-        return sqr(b) - (double) 4 * a * c;
+        return sqr(b) - 4.0 * a * c;
     }
 
 
@@ -76,7 +78,9 @@ public class Simple {
      * Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
      */
     public static int seconds(int hours, int minutes, int seconds) {
-        return 0;
+        int hoursConverted = hours * 60 * 60;
+        int minutesConverted = minutes * 60;
+        return hoursConverted + minutesConverted + seconds;
     }
 
 
@@ -88,7 +92,9 @@ public class Simple {
      * 1 сажень = 3 аршина = 48 вершков, 1 вершок = 4.445 см.
      */
     public static double lengthInMeters(int sagenes, int arshins, int vershoks) {
-        return 0;
+        double sagconv = sagenes * 3 * 48;
+        double arshconv = arshins * 48;
+        return (sagconv + arshconv + vershoks) * 4.445 / 100;
     }
 
 
@@ -99,7 +105,10 @@ public class Simple {
      * Вывести значение того же угла в радианах (например, 0.63256).
      */
     public static double angleInRadian(int grad, int min, int sec) {
-        return 0;
+        double grconv = grad * 0.0175;
+        double minconv = min * 0.00029;
+        double secconv = sec * 0.0000048;
+        return grconv + minconv + secconv;
     }
 
 
@@ -110,6 +119,7 @@ public class Simple {
      * Например, расстояние между (3, 0) и (0, 4) равно 5
      */
     public static double trackLength(double x1, double y1, double x2, double y2) {
+
         return 0;
     }
 
@@ -121,7 +131,12 @@ public class Simple {
      * Определить третью цифру справа в этом числе (в данном случае 8).
      */
     public static int thirdDigit(int number) {
-        return 0;
+        if (number <= 100) {
+            return -1;
+
+        }
+
+        return number / 100 % 10;
     }
 
 
@@ -133,7 +148,9 @@ public class Simple {
      * Определите время поезда в пути в минутах (в данном случае 216).
      */
     public static int travelMinutes(int hoursDepart, int minutesDepart, int hoursArrive, int minutesArrive) {
-        return 0;
+        int hoursConvertedDepart = hoursDepart * 60;
+        int hoursConvertedArrive = hoursArrive * 60;
+        return (hoursConvertedArrive + minutesArrive) - (hoursConvertedDepart + minutesDepart) ;
     }
 
 
@@ -145,7 +162,9 @@ public class Simple {
      * Например, 100 рублей под 10% годовых превратятся в 133.1 рубля
      */
     public static double accountInThreeYears(int initial, int percent) {
-        return 0;
+        int x = initial * percent / 100;
+        double y = x * 3;
+        return y;
     }
 
 
@@ -156,6 +175,10 @@ public class Simple {
      * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
      */
     public static int numberRevert(int number) {
-        return 0;
+        int newNumber = 0;
+        newNumber = number % 10;
+        newNumber = (newNumber * 10) + number % 100 / 10;
+        newNumber = (newNumber * 10)  + (number / 100);
+        return newNumber;
     }
 }

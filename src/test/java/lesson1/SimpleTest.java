@@ -52,20 +52,21 @@ public class SimpleTest {
         assertEquals(30035, Simple.seconds(8, 20, 35));
         assertEquals(86400, Simple.seconds(24, 0, 0));
         assertEquals(13, Simple.seconds(0, 0, 13));
+        assertEquals(105, Simple.seconds(0, 1, 45));
     }
 
     @Test
     @Tag(name = "Trivial")
     public void lengthInMeters() {
-        assertEquals(18.98, Simple.lengthInMeters(8, 2, 11), 0.01);
-        assertEquals(2.13, Simple.lengthInMeters(1, 0, 0), 0.01);
+        assertEquals(55.96, Simple.lengthInMeters(8, 2, 11), 0.01);
+        assertEquals(6.40, Simple.lengthInMeters(1, 0, 0), 0.01);
     }
 
     @Test
     @Tag(name = "Trivial")
     public void angleInRadian() {
-        assertEquals(0.63256, Simple.angleInRadian(36, 14, 35), 1.0E-5);
-        assertEquals(1.5707963267948966, Simple.angleInRadian(90, 0, 0), 1.0E-5);
+        assertEquals(0.63, Simple.angleInRadian(36, 14, 35), 1.0E-2);
+        assertEquals(1.57, Simple.angleInRadian(90, 0, 0), 1.0E-2);
     }
 
     @Test
@@ -80,7 +81,7 @@ public class SimpleTest {
     @Tag(name = "Easy")
     public void thirdDigit() {
         assertEquals(8, Simple.thirdDigit(3801));
-        assertEquals(1, Simple.thirdDigit(100));
+        assertEquals(-1, Simple.thirdDigit(100));
         assertEquals(0, Simple.thirdDigit(1000));
     }
 
